@@ -18,7 +18,7 @@ function Home() {
 
         <div className="flex justify-evenly flex-wrap gap-4 lg:mt-20  ">
           <div className="relative w-[350px] h-[350px] bg-gradient-to-br from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 overflow-hidden rounded-full  flex items-end max-[400px]:w-[200px] max-[400px]:h-[200px]">
-            <img src="/My photo.png" className=" w-[350px] absolute " alt="" />
+            <img src="/Photo.png" className=" max-w-[300px] left-6 absolute " alt="" />
           </div>
 
           <div className="w-2/4 para max-[765px]:w-5/6 " >

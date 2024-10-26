@@ -1,86 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+const Contact = () => {
 
-  const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    // Prepare the data to be sent
-    const formData = {
-      name,
-      email,
-      message
-    };
-
-    try {
-      // Send the data to the backend
-      const response = await fetch('http://localhost:3000/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        // Handle successful response
-        console.log('Message sent successfully!');
-        // Optionally, clear the form fields
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
-        // Handle error response
-        console.error('Failed to send message');
+    const socialData = [
+      {
+        imgSource: "/Instagram logo.png",
+        title: "Instagram",
+        to: "https://www.instagram.com/_yagnesh_2004/",
+      },
+      {
+        imgSource: "/Linkedin logo.png",
+        title: "LinkedIn",
+        to: "https://www.linkedin.com/in/yagnesh2004/",
       }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
+    ]
+
+    
 
   return (
-    <>
-      <div className='mt-20'>
-        <h1 className='text-slate-100 font-bold text-3xl text-center max-sm:text-2xl'>Contact Me</h1>
-      </div>
+    <div className='mt-20'>
+      <h1 className='text-center text-3xl text-white'>Connect Me On Social Media</h1>
 
-      <div className='flex justify-center mt-8 max-[400px]:mt-0'>
-        <div className='flex flex-col gap-5 w-3/6 max-lg:w-3/4 max-[400px]:w-full items-center mt-10 border-2 border-white p-5 rounded-xl'>
-          <input
-            className='w-full p-3 rounded-md text-2xl max-[400px]:text-base bg-transparent border-b-2 text-white outline-0 font-semibold'
-            type="text"
-            placeholder='Enter Your Full name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            className='w-full p-3 rounded-md text-2xl max-[400px]:text-base bg-transparent border-b-2 text-white outline-0 font-semibold'
-            type="email"
-            placeholder='Enter Your E-mail'
-            value={email}
-            
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <textarea
-            rows={4}
-            className='w-full p-3 rounded-md text-2xl max-[400px]:text-base bg-transparent border-b-2 text-white outline-0 font-semibold'
-            placeholder='Write Your Message'
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <button
-            className='w-2/5 self-start p-3 rounded-lg text-2xl max-[400px]:text-base font-semibold text-white border-solid border-2 border-white transition-colors duration-300 hover:bg-slate-50 hover:text-black'
-            onClick={handleSubmit}
-          >
-            Send
-          </button>
-        </div>
+      <div className="container m-auto mt-10 w-full flex flex-col gap-5">
+
+        {
+          socialData.map((item)=> (
+
+            <Link to={item.to} key={item.title}>
+            <section   className='w-1/4 gap-5 m-auto h-28 border-2 flex justify-center items-center border-white rounded-lg overflow-hidden cursor-pointer '>
+              <img src={item.imgSource} alt="" className='h-full' />
+              <h1 className='text-3xl text-white'>{item.title}</h1>
+            </section>
+            </Link>
+          ))
+        }
+
+        
+
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default Contact;
+export default Contact
