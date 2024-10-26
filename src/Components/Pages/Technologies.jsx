@@ -35,7 +35,7 @@ function Technologies() {
         I worked on these technologies
       </h1>
 
-      <div className="container max-w-[80%] h-4/6 flex gap-6 justify-start max-lg:justify-center m-auto flex-wrap">
+      <div className="container max-w-[80%] h-4/6 flex gap-6 justify-between max-[1400px]:justify-center max-lg:justify-center m-auto flex-wrap">
         {techItems.map((item) => (
           <section
             key={item.title}
