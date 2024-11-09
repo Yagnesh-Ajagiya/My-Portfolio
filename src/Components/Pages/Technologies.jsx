@@ -31,11 +31,11 @@ function Technologies() {
 
   return (
     <div className="mt-20">
-      <h1 className='text-slate-100 text-3xl text-center font-semibold max-[400px]:text-xl h-32 heading flex justify-center  items-center'>
+      <h1 className='text-slate-100 text-3xl text-center font-semibold   heading flex justify-center  items-center'>
         I worked on these technologies
       </h1>
 
-      <div className="container max-w-[80%] h-4/6 flex gap-6 justify-between max-[1400px]:justify-center max-lg:justify-center m-auto flex-wrap">
+      <div className="container mt-16 max-w-[80%] h-4/6 flex gap-6 justify-between max-[1400px]:justify-center max-lg:justify-center m-auto flex-wrap">
         {techItems.map((item) => (
           <section
             key={item.title}

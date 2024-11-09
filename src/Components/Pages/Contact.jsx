@@ -27,10 +27,10 @@ const Contact = () => {
     ]
 
   return (
-    <div className='mt-20'>
+    <div className='mt-20 '>
       <h1 className='text-center text-3xl text-white'>Connect Me On Social Media</h1>
 
-      <div className="container m-auto mt-10 w-full flex flex-col gap-5">
+      <div className="container m-auto mt-10 w-full flex flex-col gap-5 pb-16">
 
         {
           socialData.map((item)=> (

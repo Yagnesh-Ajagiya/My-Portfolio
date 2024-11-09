@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
       <div className="mt-20  max-[400px]:mt-0  max-[400px]:mb-20">
-        <h1 className="text-slate-100  text-3xl  text-center font-semibold max-[400px]:text-xl h-32 heading flex justify-center items-center">
+        <h1 className="text-slate-100  text-3xl  text-center font-semibold  h-32 heading flex justify-center items-center">
           <Typewriter
             options={{
               strings: ["Welcome to Yagnesh Portfolio"],
