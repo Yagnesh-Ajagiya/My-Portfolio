@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <div className='mt-20 '>
-      <h1 className='text-center text-3xl text-white'>Connect Me On Social Media</h1>
+      <h1 className='text-center text-5xl max-[400px]:text-4xl text-white'>Connect Me On Social Media</h1>
 
       <div className="container m-auto mt-10 w-full flex flex-col gap-5 pb-16">
 
@@ -36,7 +36,7 @@ const Contact = () => {
           socialData.map((item)=> (
 
             <Link to={item.to} key={item.title}>
-            <section   className='w-96 gap-5 m-auto h-28 border-2 flex justify-start text-center px-14 max-[400px]:px-5 items-center border-white rounded-lg overflow-hidden cursor-pointer max-[400px]:w-[280px] '>
+            <section   className='w-96 gap-5 m-auto h-28 max-[400px]:h-24- border-2 flex justify-start text-center px-14 max-[400px]:px-5 items-center border-white rounded-lg overflow-hidden cursor-pointer max-[400px]:w-[280px] '>
               <img src={item.imgSource} alt="" className='w-16' />
               <h1 className='text-3xl text-white'>{item.title}</h1>
             </section>

@@ -16,6 +16,8 @@ function Links() {
           <Link to="/projects" className="cursor-pointer font-semibold px-4 py-2 rounded-md  flex justify-center items-center ">{"<"}Projects{" />"}</Link>
           <Link to="/technologies" className="cursor-pointer font-semibold px-4 py-2 rounded-md  flex justify-center items-center ">{"<"}Technologies{" />"}</Link>
           <Link to="/contact" className="cursor-pointer font-semibold px-4 py-2 rounded-md  flex justify-center items-center ">{"<"}Contact Me{" />"}</Link>
+          <a href='/Yagnesh Ajagiya - Resume.pdf' rel="noopener noreferrer" className="cursor-pointer font-semibold px-4 py-2 rounded-md  flex justify-center items-center ">{"<"}Resume{" />"}</a>
+
           </div>
         </ul>
 

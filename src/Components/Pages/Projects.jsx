@@ -38,11 +38,11 @@ function Projects() {
   return (
     <div className="mt-20">
       <h1 className='text-slate-100   text-3xl  text-center font-semibold  h-20 heading flex justify-center items-center"'>
-        Here are my Projects
+        My Projects
       </h1>
 
       {projects.map((project) => (
-        <div className="mb-16 border max-[400px]:flex flex-col gap-4 py-3 border-white max-[400px]:w-[90%] w-9/12 m-auto rounded-xl" key={project.projectTitle}>
+        <div className="mb-16  max-[400px]:flex flex-col gap-4 py-3 bg-gray-800 shadow-md shadow-slate-300 max-[400px]:w-[90%] w-9/12 m-auto rounded-xl" key={project.projectTitle}>
           <h1
             htmlFor=""
             className="text-slate-100 text-3xl text-center font-bold border-b py-2"
