@@ -36,6 +36,14 @@ function ResponsiveNavbar({ isOpen, toggleNavbar }) {
       >
         Contact Me
       </Link>
+
+      <a href='/Yagnesh Ajagiya - Resume.pdf'
+        to="/technologies"
+        onClick={toggleNavbar}
+        className="text-slate-100 hover:bg-slate-700 bg-zinc-800 transition-bg duration-500 mt-4 cursor-pointer font-semibold px-4 py-2 text-2xl rounded-md flex justify-center items-center"
+      >
+        Resume
+      </a>
     </div>
   );
 }
